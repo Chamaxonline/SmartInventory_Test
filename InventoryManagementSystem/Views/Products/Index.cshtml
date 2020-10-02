@@ -1,0 +1,83 @@
+﻿@model IEnumerable<InventoryManagementSystem.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Main content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Main content -->
+                    <section class="content">
+                        <div class="container-fluid">
+                            <div class="card card-info">
+                                <div class="card-header">
+                                    <h3 class="card-title">Add Product</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form class="form-horizontal">
+                                    <div class="card-body">
+                                        <div class="form-group row">
+                                            <label for="inputProductName" class="col-sm-2 col-form-label">Name</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="inputProductName" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputCode" class="col-sm-2 col-form-label">code</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="inputCode" placeholder="Code" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputCode" class="col-sm-2 col-form-label">code</label>
+                                            <div class="col-sm-10">
+                                                <textarea class="form-control" rows="3" id="inputDescription" placeholder="Enter ..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputQty" class="col-sm-2 col-form-label">Qty</label>
+                                            <div class="col-sm-6">
+                                                <input type="number" class="form-control" id="inputQty"  placeholder="Qty">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="offset-sm-2 col-sm-10">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="inputActive">
+                                                    <label class="form-check-label" for="Active">Active</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                    <div class="card-footer">
+                                        <button type="button" class="btn btn-info" onclick="SaveProduct()">Save</button>
+                                        <button type="submit" class="btn btn-default float-right">Cancel</button>
+                                    </div>
+                                    <!-- /.card-footer -->
+                                </form>
+                            </div>
+                            <!-- /.card -->
+                            <div class="row">
+                                <div class="col-12">
+                                    @Html.Partial("_ProductList.cshtml")
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="~/ViewScripts/ProductItem.js"></script>

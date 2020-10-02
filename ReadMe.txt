@@ -3,4 +3,4 @@ change the DB Connection
 Then Run the Application
 
 User Name : jack
-Passwoprd : 123456 
+Password : 123456 
